@@ -8,12 +8,14 @@ import org.springframework.web.servlet.ModelAndView;
 
 
 @RestController
+
 public class controller {
-    @GetMapping(path = "/cashier_section4")
-   public ModelAndView cashier_section4(){
-        return new ModelAndView("cashier_section4");
+     //----- YORNG TONGHY Section----
+    @GetMapping(path = "/cashier_section5")
+   public ModelAndView cashier_section5(){
+        return new ModelAndView("cashier_section5");
    }
-    
+    // -----Your section here------- 
    
 
 }
