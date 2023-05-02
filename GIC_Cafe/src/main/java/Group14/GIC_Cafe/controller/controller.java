@@ -11,7 +11,11 @@ import org.springframework.web.servlet.ModelAndView;
 
 public class controller {
      //----- YORNG TONGHY Section----
-    @GetMapping(path = "/cashier_section5")
+    @GetMapping(path = "/cashier_section6")
+   public ModelAndView cashier_section6(){
+        return new ModelAndView("cashier_section6");
+   }
+   @GetMapping(path = "/cashier_section5")
    public ModelAndView cashier_section5(){
         return new ModelAndView("cashier_section5");
    }
