@@ -13,6 +13,14 @@ public class controller {
    public ModelAndView cashier_section4(){
         return new ModelAndView("cashier_section4");
    }
+   @GetMapping(path = "/reciept")
+   public ModelAndView reciept(){
+        return new ModelAndView("reciept");
+   }
+   @GetMapping(path = "/products")
+   public ModelAndView grud_products(){
+        return new ModelAndView("grud_products");
+   }
     
    
 
