@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        width: 30%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 20px;
+    }
+    .row{
+        border: 2px solid rgb(107, 107, 107);
+    }
+    .new_category{
+        font-weight: bold;
+        font-size: 22px;
+        border-bottom: 0;
+        padding: 15px;
+    }
+    .input_category{
+        padding: 15px;
+    }
+    .btn2{
+        padding: 15px;
+    }
+    .input_info{
+        padding: 5px;
+    }
+    .input_info > div > div{
+        margin-top: 10px;
+    }
+    input{
+        float: right;
+        width: 170px;
+        height: 20px;
+    }
+    .add_info{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .btn_ok{
+        width: 230px;
+        height: 30px;
+        background-color: #0d9e17;
+        color: #fff;
+        border: 0;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+    .btn_cancel{
+        width: 130px;
+        height: 30px;
+        float: right;
+        background-color: #652a0e;
+        border: 0;
+        color: #fff;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+    @media only screen and (max-width: 768px) {
+        .container{
+            width: 60%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 20px;
+        }
+    }
+</style>
+<body>
+    <div class="container">
+        <form action="">
+            <div class="row new_category">New Category</div>
+                <div class=" row input_info">
+                    <div class="input_category">
+                        <div class="input_field">
+                            <label for="">Category code :</label>
+                            <input type="text">
+                        </div>
+                        <div class="input_field">
+                            <label for="">Category name :</label>
+                            <input type="text" name="" id="">
+                        </div>
+                    </div>
+                    <div class="btn2">
+                        <button class="btn_ok" type="button">OK</button>
+                        <button class="btn_cancel" type="button">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
