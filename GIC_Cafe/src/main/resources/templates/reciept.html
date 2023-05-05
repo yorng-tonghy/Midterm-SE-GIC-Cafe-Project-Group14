@@ -5,148 +5,138 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reciept</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+   
     <style>
-        .container{
-            width: 30%;
-            height: 70%;
-            margin: auto;
+        @media print {
+            .container {
+                width: 70% !important;
+            }
         }
-        .header h1{
-            text-align: center;
-            font-weight: 800;
-            font-family: monospace;
-            font-size: 50px;
+        .font{
+            font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
         }
-        .line{
-            width: 100%;
-            border: 1px solid rgb(104, 101, 101);
+        .fontp{
+            font-family: 'Bahnschrift', sans-serif;
         }
-
-        .order_num p{
-            font-weight: 400;
-
-        }
-        .order_num span{
-           justify-content: space-between;
-        }
-        .link{
-            justify-content: right;
-        }
-        .link a:hover{
-            background-color: rgb(79, 79, 232);
-        }
-        .sub-con{
-            display: flex;
-            justify-content: space-between;
-        }
-        .sub .sub-con {
-            display: flex;
-            justify-content: space-between;
-        }
-        .sub{
-            display: flex;
-            justify-content: space-between;
-            font-weight: 600;
-        }
-        .space{
-            justify-content: space-between;
-        }
-       
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>GIC Cafe</h1>
+    <div class="container w-[30%] h-fit m-auto py-3">
+        <div class="text-center  my-3 ">
+            <h1 class="font font-bold text-[60px]">GIC Cafe</h1>
+            <p class="text-[25px] tracking-widest fontp">CAFFEE AND BAKERY</p>
         </div>
-        <div class="content">
-            <div class="line"></div>
-            <div class="order_num">
-                <p>Order Number : <span>176</span></p>
+        <div class="content p-3">
+            <div class="w-[100%] border-[1px] border-solid border-gray-600  "></div>
+            <div class="w-[40%] font-500 py-3 flex justify-between">
+                <div><p>Order Number : </p></div>
+                <div><span><b>176</b></span></div>
             </div>
-            <div class="line"></div>
-            <div class="link">
-                <p>Brown 8 (Sotheara) | 09373273</p>
-                <a href="">browncoffee.com.kh</a>
+            <div class="line w-[100%] border-[1px] border-solid border-gray-600 "></div>
+            <div class="py-3">
+                <p class="text-right">Brown 8 (Sotheara) | 09373273</p>
+                <p class="text-right"><a href="" class="hover:text-blue-300 ">browncoffee.com.kh</a></p>
             </div>
-            <div class="line"></div>
-            <div class="sub">
-                <div class="con">DINE IN</div>
-                <div class="con">BILL</div>
-                <div class="con">193838</div>
+            <div class="line w-[100%] border-[1px] border-solid border-gray-600 "></div>
+            <div class="sub flex justify-between py-3">
+                <div class="con font-bold">DINE IN</div>
+                <div class="con font-bold">BILL</div>
+                <div class="con font-bold">193838</div>
             </div>
-            <div class="line"></div>
-           <div class="sub">
-                <div class="sub-con">
-                    <div class="con">
-                        Cashier : <span>Chan Boo</span>
+            <div class="line w-[100%] border-[1px] border-solid border-gray-600 "></div>
+            <div class="sub flex justify-between py-3">
+                <div class="sub-con justify-between">
+                    <div class="con flex justify-between">
+                        <div>Cashier : </div>
+                        <div>
+                            <span class="font-semibold">Chan Boo</span>
+                        </div>
                     </div>
-                    <div class="con">
-                        T-In : <span>20/06/2023</span>
+                    <div class="con flex justify-between">
+                        <div>T-In :</div> 
+                        <div>
+                            <span class="font-semibold">6:00</span>
+                        </div>
                     </div>
-                    <div class="con">
-                        PAX : <span>2</span>
+                    <div class="con flex justify-between">
+                        <div>PAX : </div>
+                        <div>
+                            <span class="font-semibold">2</span>
+                        </div>
                     </div>
                 </div>
                 <!-- <br> -->
                 <div class="sub-con">
-                    <div class="con">
-                        Table : <span>SEC-123</span>
+                    <div class="con flex justify-between">
+                        <div> Table :</div> 
+                        <div>
+                            <span class="font-semibold">SEC-123</span>
+                        </div>
                     </div>
-                    <div class="con">
-                        T-Out : <span>20/07/2023</span>
+                    <div class="con flex justify-between">
+                        <div>T-Out :</div>
+                        <div>
+                            <span class="font-semibold">7:00</span>
+                        </div>
                     </div>
-                    <div class="con">
-                        Counter : <span>01</span>
+                    <div class="con flex justify-between">
+                        <div>Counter :</div> 
+                        <div>
+                            <span class="font-semibold">01</span>
+                        </div>
                     </div>
                 </div>
-           </div>
-           <div class="line"></div>
-           <div class="sub">
-                <div class="con">Description</div>
-                <div class="con">Quality</div>
-                <div class="con">Unit Price</div>
-                <div class="con">Amount</div>
-           </div>
-           <div class="line"></div>
-           <div class="sub-con">
-                <div>
+            </div>
+            <div class="line w-[100%] border-[1px] border-solid border-gray-600 "></div>
+            <div class="sub py-3 flex justify-between">
+                <div class="con font-bold">Description</div>
+                <div class="con font-bold">Quality</div>
+                <div class="con font-bold">Unit Price</div>
+                <div class="con font-bold">Amount</div>
+            </div>
+            <div class="line w-[100%] border-[1px] border-solid border-gray-600 "></div>
+            <div class="sub-con py-3 ">
+                <div class="flex justify-between">
                     <div class="con">Apple Carrot</div>
                     <div class="con">Regular 1</div>
                     <div class="con">2.05</div>
                     <div class="con">2.05</div>
                 </div>
-                <div>
+                <div class="flex justify-between">
                     <div class="con">Cappuccino</div>
                     <div class="con">Regular 1</div>
                     <div class="con">2.40</div>
                     <div class="con">2.40</div>
                 </div>
-           </div>
-           <div class="line"></div>
-           <div>
-                <div class="sub_total">
-                    <p>Sub Total</p>
-                    <p><span>5.36</span></p>
+            </div>
+            <div class="line w-[100%] border-[1px] border-solid border-gray-600 "></div>
+            <div class="w-full flex justify-end">
+                <div class="py-3 w-[70%] h-fit  justify-end">
+                    <div class="sub_total flex justify-between">
+                        <p class="font-semibold">Sub Total</p>
+                        <p><span class="font-bold" >5.36</span></p>
+                    </div>
+                    <div class="line w-[100%] border-[1px] border-solid border-gray-600 "></div>
+                    <div class="grand_totals flex justify-between">
+                        <p class="font-semibold">Grand Total(S)</p>
+                        <p><span class="font-bold" >6.36</span></p>
+                    </div>
+                    <div class="grand_totalr flex justify-between">
+                        <p class="font-semibold">Grand Total(R)</p>
+                        <p><span class="font-bold" >21,700</span></p>
+                    </div>
+                    <div class="line w-[100%] border-[1px] border-solid border-gray-600 "></div>
+                    <div class="space py-3"></div>
+                    <div class="line w-[100%] border-[1px] border-solid border-gray-600 "></div>
                 </div>
-                <div class="line"></div>
-                <div class="grand_totals">
-                    <p>Grand Total(S)</p>
-                    <p><span>6.36</span></p>
-                </div>
-                <div class="grand_totalr">
-                    <p>Grand Total(R)</p>
-                    <p><span>21,700</span></p>
-                </div>
-                <div class="line"></div>
-                <div class="space"></div>
-                <div class="line"></div>
-           </div>
-           <div class="line"></div>
+                
+            </div>
+            <div class="line w-[100%] border-[1px] border-solid border-gray-600 "></div>
         </div>
-        <div class="footer">
+        <div class="footer text-center text-center">
             <div class="pwd">
-                <p>WIFI Password : <span>giccafei4c</span></p>
+                <p>WIFI Password : <span>giccafegroup14</span></p>
             </div>
             <div class="del">
                 <b>Delivery Hotline : <span>023215 215</span></b>
