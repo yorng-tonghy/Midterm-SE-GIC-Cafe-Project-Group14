@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="index.js"defer></script>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <div id="container">
+    <div class="order">
+      <h1> Histories</h1>
+      <div class="table">
+        <table>
+          <tr>
+            <th></th>
+            <th>Order number</th>
+            <th>Table</th>
+            <th>Price</th>
+            <th>Date</th>
+          </tr>
+          <tr id="row1">
+            <td id="no1"></td>
+            <td id="order1" class="editable" onclick="editCell(this)"></td>
+            <td id="table1" class="editable" onclick="editCell(this)"></td>
+            <td id="price1" class="editable" onclick="editCell(this)"></td>
+            <td id="date1" class="editable" onclick="editCell(this)"></td>
+          </tr>
+          <tr id="row2">
+            <td id="no2"></td>
+            <td id="order2" class="editable" onclick="editCell(this)"></td>
+            <td id="table2" class="editable" onclick="editCell(this)"></td>
+            <td id="price2" class="editable" onclick="editCell(this)"></td>
+            <td id="date2" class="editable" onclick="editCell(this)"></td>
+          </tr>
+          
+        </table>
+
+      </div>
+    </div>
+
+  </div>
+    <style>
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+
+        body {
+          min-width: 100vw;
+          min-height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        body #container {
+          width: 80vw;
+          height: 50vh;
+          border: 2px solid black;
+        }
+        body #container .order {
+          display: flex;
+          flex-direction: column;
+        }
+        body #container .order .table {
+          padding: 0.5rem;
+        }
+        body #container .order h1 {
+          border-bottom: 1px solid black;
+          padding: 0.5rem;
+        }
+        body #container .order table {
+          width: 100%;
+          border-collapse: collapse;
+          text-align: center;
+        }
+        body #container .order th {
+          background-color: antiquewhite;
+        }
+        body #container .order th, body #container .order td {
+          text-align: left;
+          padding: 1rem;
+        }
+        body #container .order tr:nth-child(even) {
+          background-color: #b9dcf3;
+        }
+        body #container .order .editable {
+          cursor: pointer;
+        }/*# sourceMappingURL=style.css.map */
+    </style>
+    
+    <script>
+              var orders = [
+            {
+              no:"1",
+              number: "N00001", 
+              table: "01", 
+              price: "2.3$", 
+              date: "03/09/2018 08:30:00"
+            },
+            {
+              no:"2",
+              number: "N00001", 
+              table: "02", 
+              price: "2.1$", 
+              date: "03/09/2018 08:30:00"},
+
+          ];
+          
+          for (var i = 0; i < orders.length; i++) {
+            var order = orders[i];
+            document.getElementById("no" + (i+1)).innerHTML = order.no;
+            document.getElementById("order" + (i+1)).innerHTML = order.number;
+            document.getElementById("table" + (i+1)).innerHTML = order.table;
+            document.getElementById("price" + (i+1)).innerHTML = order.price;
+            document.getElementById("date" + (i+1)).innerHTML = order.date;
+          }
+          
+          function editCell(cell) {
+            var value = cell.innerHTML;
+            var input = document.createElement("input");
+            input.type = "text";
+            input.value = value;
+            cell.innerHTML = "";
+            cell.appendChild(input);
+          
+            input.focus();
+            input.onblur = function() {
+              var newValue = input.value;
+              cell.removeChild(input);
+              cell.innerHTML = newValue;
+              var row = cell.parentNode.id; 
+              var col = cell.id;
+              var index = parseInt(row.slice(-1)) - 1; 
+              var key = col.slice(0, -1); 
+              orders[index][key] = newValue;
+              console.log(orders);
+            };
+          }
+    </script>
+</body>
+</html>
