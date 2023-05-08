@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-GicCafeApplication<GIC_Cafe>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "Group14.GIC_Cafe.GicCafeApplication",
+            "projectName": "GIC_Cafe",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
