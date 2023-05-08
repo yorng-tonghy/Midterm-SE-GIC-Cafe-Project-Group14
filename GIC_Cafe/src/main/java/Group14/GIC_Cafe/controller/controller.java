@@ -29,8 +29,8 @@ public class controller {
         return new ModelAndView("reciept");
    }
    @GetMapping(path = "/products")
-   public ModelAndView grud_products(){
-        return new ModelAndView("grud_products");
+   public ModelAndView crud_products(){
+        return new ModelAndView("crud_products");
    }
    @GetMapping(path = "/cashier_section5")
    public ModelAndView cashier_section5(){
